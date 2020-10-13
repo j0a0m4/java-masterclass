@@ -1,14 +1,18 @@
 package ArraySection.min;
 
-import java.util.*;
+import java.util.ArrayDeque;
+import java.util.Arrays;
+import java.util.Deque;
+import java.util.NoSuchElementException;
 
 public class MinChallenge {
+    
     public static int findMin(int[] numbers) {
         return Arrays.stream(numbers)
                 .min()
                 .orElseThrow(NoSuchElementException::new);
     }
-
+    
     public static int[] reverse(int[] numbers) {
         Deque<Integer> list = new ArrayDeque<>();
         Arrays.stream(numbers)
@@ -17,7 +21,7 @@ public class MinChallenge {
                 .mapToInt(Integer::intValue)
                 .toArray();
     }
-
+    
     private static void operation(Option option, int[] numbers) {
         switch (option) {
             case MIN:
@@ -31,7 +35,7 @@ public class MinChallenge {
                 break;
         }
     }
-
+    
     public static void main(String[] args) {
         var input = new MinChallengeIn();
         operation(input.getOption(), input.getNumbers());
