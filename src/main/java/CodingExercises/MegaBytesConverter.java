@@ -1,6 +1,7 @@
-package Challenge;
+package CodingExercises;
 
 public class MegaBytesConverter {
+    
     private static final int megaByte = 1024;
     
     public static int getMegaBytes(int kyloBytes) {
@@ -15,17 +16,11 @@ public class MegaBytesConverter {
         if (kyloBytes < 0) {
             return "Invalid Value";
         }
-        return String.format("%d KB = %d MB and %d KB",
-                             kyloBytes, getMegaBytes(kyloBytes), getRemainder(kyloBytes));
+        return String.format("%d KB = %d MB and %d KB", kyloBytes,
+                             getMegaBytes(kyloBytes), getRemainder(kyloBytes));
     }
     
     public static void printMegaBytesAndKiloBytes(int kyloBytes) {
-            System.out.println(convertMegaBytesAndKiloBytes(kyloBytes));
-    }
-    
-    public static void main(String[] args) {
-        printMegaBytesAndKiloBytes(2500);
-        printMegaBytesAndKiloBytes(-1024);
-        printMegaBytesAndKiloBytes(5000);
+        System.out.println(convertMegaBytesAndKiloBytes(kyloBytes));
     }
 }

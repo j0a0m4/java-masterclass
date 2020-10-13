@@ -1,4 +1,4 @@
-package Challenge;
+package CodingExercises;
 
 public class LeapingYear {
     
